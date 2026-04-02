@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
+import frontpage from '../../assets/frontpage.jpg';
 
 interface HeroProps {
   onOpen: () => void;
@@ -11,8 +12,8 @@ export function Hero({ onOpen }: HeroProps) {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1658393990097-6db4ca3c5173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwdHVubmVsJTIwbGlnaHQlMjBjZW50ZXIlMjBwZXJzcGVjdGl2ZXxlbnwxfHx8fDE3NzQzNTAyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Tunnel with light"
+          src={frontpage}
+          alt="Front page"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#F7F6F2]/80 via-[#F7F6F2]/70 to-[#F7F6F2]/90" />
@@ -25,7 +26,6 @@ export function Hero({ onOpen }: HeroProps) {
         transition={{ duration: 1, ease: 'easeOut' }}
         className="relative z-10 text-center px-6 max-w-2xl mx-auto"
       >
-        {/* Decorative element */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -37,14 +37,14 @@ export function Hero({ onOpen }: HeroProps) {
               Save The Date
             </span>
           </div>
-        </motion.div> 
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="text-sm tracking-[0.3em] uppercase text-[#345938] mb-6"
-        > 
+        >
           Thư mời tiệc cưới
         </motion.p>
 
@@ -66,7 +66,12 @@ export function Hero({ onOpen }: HeroProps) {
           transition={{ delay: 0.9 }}
           className="mt-8 mb-12"
         >
-          <p className="text-2xl md:text-3xl text-[#345938]" style={{ fontFamily: "'Playfair Display', serif" }}>20.06.2026</p>
+          <p
+            className="text-2xl md:text-3xl text-[#345938]"
+            style={{ fontFamily: "'Playfair Display Italic', serif" }}
+          >
+            20.06.2026
+          </p>
         </motion.div>
 
         <motion.button
@@ -92,27 +97,14 @@ export function Hero({ onOpen }: HeroProps) {
         </motion.p>
       </motion.div>
 
-      {/* Decorative floating elements */}
       <motion.div
-        animate={{
-          y: [0, -20, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+        animate={{ y: [0, -20, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#CFD6AD]/20 blur-3xl"
       />
       <motion.div
-        animate={{
-          y: [0, 20, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+        animate={{ y: [0, 20, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-[#F3BDCB]/20 blur-3xl"
       />
     </section>

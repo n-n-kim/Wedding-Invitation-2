@@ -11,14 +11,14 @@ export function Footer() {
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto text-center"
       >
-        {/* Decorative divider */}
+        {/* Decorative divider
         <div className="mb-8 flex items-center justify-center">
           <div className="h-px w-20 bg-[#CFD6AD]" />
           <div className="mx-4">
             <span className="text-4xl text-[#345938] font-bold">♡</span>
           </div>
           <div className="h-px w-20 bg-[#CFD6AD]" />
-        </div>
+        </div> */}
 
         {/* Thank you message */}
         <motion.div

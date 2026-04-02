@@ -1,17 +1,17 @@
 import { motion } from 'motion/react';
 import { MapPin, Navigation } from 'lucide-react';
+import page5 from '../../assets/page5.png';
 
 export function Location() {
   const handleDirections = () => {
-    // In a real app, this would open Google Maps
-    window.open(
-      'https://share.google/BaifwZgJzdQhNtg53',
-      '_blank'
-    );
+    window.open('https://share.google/9YGJJwAoTcMrYFxkB', '_blank');
   };
 
   return (
-    <section className="py-20 px-6 bg-white" id="location">
+    <section
+      className="py-20 px-6 bg-gradient-to-b from-[#FFFDF8] via-[#FCF7EA] to-[#F7F1D8]"
+      id="location"
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,27 +29,31 @@ export function Location() {
           >
             <MapPin className="w-8 h-8 text-[#345938]" />
           </motion.div>
-          <h2 className="text-4xl md:text-5xl text-[#345938] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+
+          <h2
+            className="text-4xl md:text-5xl text-[#345938] mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Địa Điểm Tổ Chức
           </h2>
-          <p className="text-gray-600">Tiệc cưới chính</p>
+
+          <p className="text-gray-600">Lễ tân hôn</p>
         </div>
 
-        <div className="bg-gradient-to-br from-[#EEDFCA]/30 to-[#F3BDCB]/20 rounded-3xl overflow-hidden border border-[#CFD6AD]/30">
-          {/* Map placeholder */}
+        <div className="bg-white/70 rounded-3xl overflow-hidden border border-[#CFD6AD]/30 shadow-xl backdrop-blur-sm">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="aspect-video bg-gradient-to-br from-[#CFD6AD]/20 to-[#F3BDCB]/20 relative overflow-hidden"
+            className="aspect-video relative overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1769812343890-4e406a33cfbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwdmVudWUlMjBlbGVnYW50JTIwZGVjb3JhdGlvbnxlbnwxfHx8fDE3NzQyNzM0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src={page5}
               alt="Wedding venue"
-              className="w-full h-full object-cover opacity-60"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/10 to-transparent" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="w-12 h-12 bg-[#345938] rounded-full flex items-center justify-center shadow-lg">
                 <MapPin className="w-6 h-6 text-white" fill="white" />
@@ -57,7 +61,6 @@ export function Location() {
             </div>
           </motion.div>
 
-          {/* Location details */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,12 +72,11 @@ export function Location() {
               className="text-3xl md:text-4xl text-[#345938] mb-4 text-center"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Callary Wedding & Events
+              Nhà hàng Thắng Lợi 1
             </h3>
 
             <p className="text-center text-gray-700 mb-8 leading-relaxed">
-              Lầu 5 - Sảnh MAGNOLIA<br />
-              123 Lý Chính Thắng, phương Xuân Hòa, TPHCM
+              01 Đ. Lê Hồng Phong, P. Mỹ Bình, Long Xuyên, An Giang
             </p>
 
             <div className="flex justify-center">

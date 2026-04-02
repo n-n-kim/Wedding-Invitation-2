@@ -8,7 +8,7 @@ import { Location } from './components/Location';
 import { Countdown } from './components/Countdown';
 import { RSVP } from './components/RSVP';
 import { Gallery } from './components/Gallery';
-import { Gift } from './components/Gift';
+// import { Gift } from './components/Gift';
 import { Footer } from './components/Footer';
 import { FloatingButtons } from './components/FloatingButtons';
 
@@ -43,7 +43,7 @@ export default function App() {
       <Countdown />
       <RSVP />
       <Gallery />
-      <Gift />
+      {/* <Gift /> */}
       <Footer />
       <FloatingButtons />
     </div>
