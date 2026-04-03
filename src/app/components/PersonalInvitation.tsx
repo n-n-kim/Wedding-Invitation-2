@@ -7,15 +7,15 @@ interface PersonalInvitationProps {
 
 function SparkleDivider() {
   return (
-    <div className="flex items-center justify-center text-[#345938] text-sm md:text-base tracking-wider select-none">
+    <div className="flex items-center justify-center text-[#5C4033] text-sm md:text-base tracking-wider select-none">
       <motion.span
         animate={{
           opacity: [0.5, 1, 0.5],
           scale: [1, 1.25, 1],
           filter: [
-            "drop-shadow(0 0 0px rgba(52,89,56,0))",
-            "drop-shadow(0 0 8px rgba(52,89,56,0.5))",
-            "drop-shadow(0 0 0px rgba(52,89,56,0))",
+            "drop-shadow(0 0 0px rgba(92,64,51,0))",
+            "drop-shadow(0 0 8px rgba(92,64,51,0.5))",
+            "drop-shadow(0 0 0px rgba(92,64,51,0))",
           ],
         }}
         transition={{
@@ -37,9 +37,9 @@ function SparkleDivider() {
           opacity: [0.5, 1, 0.5],
           scale: [1, 1.25, 1],
           filter: [
-            "drop-shadow(0 0 0px rgba(52,89,56,0))",
-            "drop-shadow(0 0 8px rgba(52,89,56,0.5))",
-            "drop-shadow(0 0 0px rgba(52,89,56,0))",
+            "drop-shadow(0 0 0px rgba(92,64,51,0))",
+            "drop-shadow(0 0 8px rgba(92,64,51,0.5))",
+            "drop-shadow(0 0 0px rgba(92,64,51,0))",
           ],
         }}
         transition={{
@@ -61,7 +61,7 @@ export function PersonalInvitation({
 }: PersonalInvitationProps) {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center py-20 px-0 overflow-hidden"
       id="invitation"
     >
       {/* Background image */}
@@ -82,18 +82,18 @@ export function PersonalInvitation({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-20 max-w-4xl mx-auto text-center"
+        className="relative z-20 w-full text-center"
       >
-        <div className="px-8 py-10 md:px-14 md:py-14 bg-[#F7F6F2]/15 backdrop-blur-sm rounded-[999px] shadow-lg border border-white/40">
+        <div className="w-full px-6 py-8 md:px-12 md:py-10 bg-[#F7F6F2]/15 backdrop-blur-sm rounded-none shadow-lg border-y border-white/40">
           {/* Decorative line */}
-          <div className="mb-10 flex items-center justify-center">
+          {/* <div className="mb-10 flex items-center justify-center">
             <SparkleDivider />
-            <div className="mx-4 w-2.5 h-2.5 rounded-full bg-[#345938]" />
+            <div className="mx-4 w-2.5 h-2.5 rounded-full bg-[#5C4033]" />
             <SparkleDivider />
-          </div>
+          </div> */}
 
           <p
-            className="text-4xl md:text-6xl text-[#345938] mb-10"
+            className="text-4xl md:text-6xl text-[#5C4033] mb-10"
             style={{ fontFamily: "'Great Vibes', cursive" }}
           >
             Trân Trọng Kính Mời
@@ -105,10 +105,10 @@ export function PersonalInvitation({
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mb-14 p-10 bg-gradient-to-br from-[#EEDFCA]/30 to-[#F3BDCB]/20 rounded-2xl border border-[#345938]/30"
+              className="mb-10 max-w-2xl mx-auto p-6 md:p-8 bg-gradient-to-br from-[#EEDFCA]/30 to-[#F3BDCB]/20 rounded-2xl border border-[#5C4033]/30"
             >
               <p
-                className="text-4xl md:text-5xl text-[#345938] mb-2"
+                className="text-4xl md:text-5xl text-[#5C4033] mb-2"
                 style={{
                   fontFamily: "'Playfair Display', serif",
                 }}
@@ -119,27 +119,22 @@ export function PersonalInvitation({
           )}
 
           <div
-            className="mx-auto max-w-2xl text-gray-700 leading-relaxed text-xl md:text-2xl"
+            className="mx-auto max-w-3xl text-gray-700 leading-relaxed text-xl md:text-2xl"
             style={{ fontFamily: "'Times New Roman', normal" }}
           >
-            <p className="mb-8">
+            <p className="mb-1">
               Với niềm vui và hạnh phúc vô bờ, chúng tôi trân trọng
               kính mời {guestName || "quý khách"} đến dự buổi lễ
-              thành hôn của chúng tôi.
+              tân hôn của con chúng tôi.
             </p>
-            {/* <p className="mb-8">
-              Sự hiện diện của {guestName ? "bạn" : "quý khách"} sẽ
-              là niềm vinh hạnh và nguồn động viên lớn lao cho chúng
-              tôi trong ngày trọng đại này.
-            </p> */}
           </div>
 
           {/* Decorative line */}
-          <div className="mt-14 flex items-center justify-center">
+          {/* <div className="mt-14 flex items-center justify-center">
             <SparkleDivider />
-            <div className="mx-4 w-12 h-1 bg-[#345938]" />
+            <div className="mx-4 w-12 h-1 bg-[#5C4033]" />
             <SparkleDivider />
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </section>

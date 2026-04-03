@@ -15,7 +15,7 @@ export function Footer() {
         <div className="mb-8 flex items-center justify-center">
           <div className="h-px w-20 bg-[#CFD6AD]" />
           <div className="mx-4">
-            <span className="text-4xl text-[#345938] font-bold">♡</span>
+            <span className="text-4xl text-[#5C4033] font-bold">♡</span>
           </div>
           <div className="h-px w-20 bg-[#CFD6AD]" />
         </div> */}
@@ -28,7 +28,10 @@ export function Footer() {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <p className="text-2xl md:text-3xl text-[#345938] mb-6 leading-relaxed" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <p
+            className="text-2xl md:text-3xl text-[#5C4033] mb-6 leading-relaxed"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Cảm ơn bạn đã dành thời gian xem lời mời của chúng tôi
           </p>
           <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
@@ -45,7 +48,10 @@ export function Footer() {
           transition={{ delay: 0.4 }}
           className="mb-8"
         >
-          <div className="text-3xl md:text-4xl text-[#345938]" style={{ fontFamily: "'Edwardian Script ITC3', cursive" }}>
+          <div
+            className="text-3xl md:text-4xl text-[#5C4033]"
+            style={{ fontFamily: "'Edwardian Script ITC3', cursive" }}
+          >
             Quốc Tân & Ngọc Trâm
           </div>
         </motion.div>
@@ -58,7 +64,7 @@ export function Footer() {
           transition={{ delay: 0.6 }}
           className="mb-12"
         >
-          <p className="text-lg text-gray-600">20.06.2026</p>
+          <p className="text-lg text-gray-600">26.04.2026</p>
         </motion.div>
 
         {/* Decorative divider */}
@@ -73,7 +79,16 @@ export function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
         >
-          <p className="text-sm text-gray-500 opacity-50">Thiệp cưới Tiến Đạt ehehe</p>
+          <p className="text-sm text-gray-500 mt-6">
+  <a
+    href="https://share.google/1GbSkphjiWEXVy2o6"
+    target="_blank"
+    rel="noopener noreferrer"
+    // className="text-[#5C4033] font-medium hover:underline"
+  >
+    Thiệp cưới - Danh thiếp Tiến Đạt
+  </a>
+</p>
         </motion.div>
       </motion.div>
     </footer>

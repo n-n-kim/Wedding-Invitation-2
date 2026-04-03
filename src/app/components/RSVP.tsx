@@ -11,47 +11,52 @@ export function RSVP() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  try {
-    const formBody = new URLSearchParams({
-      name: formData.name,
-      attendance: formData.attendance,
-      guests: formData.attendance === 'Tôi sẽ tham dự' ? formData.guests : '0',
-      message: formData.message,
-    }); 
+    try {
+      const formBody = new URLSearchParams({
+        name: formData.name,
+        attendance: formData.attendance,
+        guests: formData.attendance === 'Tôi sẽ tham dự' ? formData.guests : '0',
+        message: formData.message,
+      });
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbw9bD4Khilx0snCBKf8N6BPkAXJidv9cZfY7T4OjdLRbgf3XLkwKRf2yMezRyGW8CCm/exec', {
-      method: 'POST',
-      body: formBody,
-    });
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbw9bD4Khilx0snCBKf8N6BPkAXJidv9cZfY7T4OjdLRbgf3XLkwKRf2yMezRyGW8CCm/exec',
+        {
+          method: 'POST',
+          body: formBody,
+        }
+      );
 
-    const result = await response.json();
-    console.log(result);
+      const result = await response.json();
+      console.log(result);
 
-    if (result.success) {
-      setIsSubmitted(true);
+      if (result.success) {
+        setIsSubmitted(true);
 
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          attendance: '',
-          guests: '1',
-          message: '',
-        });
-      }, 3000);
-    } else {
-      alert('Gửi thất bại: ' + result.message);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: '',
+            attendance: '',
+            guests: '1',
+            message: '',
+          });
+        }, 3000);
+      } else {
+        alert('Gửi thất bại: ' + result.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Có lỗi khi gửi xác nhận');
     }
-  } catch (error) {
-    console.error(error);
-    alert('Có lỗi khi gửi xác nhận');
-  }
-};
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -68,7 +73,10 @@ const handleSubmit = async (e: React.FormEvent) => {
         className="max-w-3xl mx-auto"
       >
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-[#345938] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2
+            className="text-4xl md:text-5xl text-[#5C4033] mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Xác Nhận Tham Dự
           </h2>
           <p className="text-gray-600">
@@ -90,16 +98,16 @@ const handleSubmit = async (e: React.FormEvent) => {
               className="text-center py-12"
             >
               <CheckCircle2 className="w-16 h-16 text-[#CFD6AD] mx-auto mb-4" />
-              <h3 className="text-2xl text-[#345938] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h3
+                className="text-2xl text-[#5C4033] mb-2"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
                 Cảm ơn bạn!
               </h3>
-              <p className="text-gray-700">
-                Chúng tôi đã nhận được xác nhận của bạn
-              </p>
+              <p className="text-gray-700">Chúng tôi đã nhận được xác nhận của bạn</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm text-gray-700 mb-2">
                   Họ và tên <span className="text-[#F3BDCB]">*</span>
@@ -111,12 +119,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#345938] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#5C4033] transition-colors"
                   placeholder="Nhập họ và tên của bạn"
                 />
               </div>
 
-              {/* Attendance */}
               <div>
                 <label htmlFor="attendance" className="block text-sm text-gray-700 mb-2">
                   Trạng thái tham dự <span className="text-[#F3BDCB]">*</span>
@@ -127,7 +134,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   required
                   value={formData.attendance}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#345938] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#5C4033] transition-colors"
                 >
                   <option value="">Chọn trạng thái</option>
                   <option value="Tôi sẽ tham dự">Tôi sẽ tham dự</option>
@@ -135,7 +142,6 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </select>
               </div>
 
-              {/* Number of guests */}
               {formData.attendance === 'Tôi sẽ tham dự' && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
@@ -153,13 +159,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                     max="50"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#345938] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#5C4033] transition-colors"
                     placeholder="Nhập số người"
                   />
                 </motion.div>
               )}
 
-              {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm text-gray-700 mb-2">
                   Lời nhắn hoặc ghi chú
@@ -170,17 +175,16 @@ const handleSubmit = async (e: React.FormEvent) => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#345938] transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-[#CFD6AD]/30 bg-white focus:outline-none focus:border-[#5C4033] transition-colors resize-none"
                   placeholder="Gửi lời chúc đến cô dâu chú rể..."
                 />
               </div>
 
-              {/* Submit button */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-4 bg-[#345938] text-white rounded-full hover:bg-[#345938]/90 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 bg-[#5C4033] text-white rounded-full hover:bg-[#5C4033]/90 transition-colors flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Gửi xác nhận</span>

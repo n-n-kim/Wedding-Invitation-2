@@ -53,11 +53,16 @@ export function Countdown() {
             transition={{ type: 'spring' }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <Clock className="w-8 h-8 text-[#345938]" />
+            <Clock className="w-8 h-8 text-[#5C4033]" />
           </motion.div>
-          <h2 className="text-4xl md:text-5xl text-[#345938] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+
+          <h2
+            className="text-4xl md:text-5xl text-[#5C4033] mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Đếm Ngược Đến Ngày Cưới
           </h2>
+
           <p className="text-gray-600">Thời gian còn lại</p>
         </div>
 
@@ -78,11 +83,12 @@ export function Countdown() {
               className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-[#CFD6AD]/30"
             >
               <div
-                className="text-4xl md:text-5xl text-[#345938] mb-2"
+                className="text-4xl md:text-5xl text-[#5C4033] mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {String(unit.value).padStart(2, '0')}
               </div>
+
               <div className="text-sm md:text-base text-gray-600 uppercase tracking-wider">
                 {unit.label}
               </div>
@@ -97,7 +103,10 @@ export function Countdown() {
           transition={{ delay: 0.7 }}
           className="mt-12 text-center"
         >
-          <p className="text-xl text-gray-700 italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <p
+            className="text-xl text-gray-700 italic"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Hãy đánh dấu ngày này trong lịch của bạn
           </p>
         </motion.div>
