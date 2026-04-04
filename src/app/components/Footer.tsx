@@ -52,7 +52,14 @@ export function Footer() {
             className="text-3xl md:text-4xl text-[#5C4033]"
             style={{ fontFamily: "'Edwardian Script ITC3', cursive" }}
           >
-            Quốc Tân & Ngọc Trâm
+            Nguyễn Thị Thùy Trang 
+          </div>
+
+          <div
+            className="text-3xl md:text-4xl text-[#5C4033]"
+            style={{ fontFamily: "'Edwardian Script ITC3', serif" }}
+          >
+            kính mời !
           </div>
         </motion.div>
 
