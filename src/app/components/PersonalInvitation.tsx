@@ -73,8 +73,8 @@ export function PersonalInvitation({
         />
       </div>
 
-      {/* White translucent layer */}
-      <div className="absolute inset-0 z-10 bg-white/35" />
+      {/* Warm yellow translucent layer */}
+      <div className="absolute inset-0 z-10 bg-[#FFF8E8]/40" />
 
       {/* Content */}
       <motion.div

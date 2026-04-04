@@ -32,11 +32,11 @@ export function Footer() {
             className="text-2xl md:text-3xl text-[#5C4033] mb-6 leading-relaxed"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Cảm ơn bạn đã dành thời gian xem lời mời của chúng tôi
+            Cảm ơn quý khách đã dành thời gian xem lời mời của chúng tôi
           </p>
           <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Sự hiện diện của bạn trong ngày trọng đại này là niềm hạnh phúc và vinh hạnh lớn nhất đối với chúng tôi.
-            Rất mong được đón tiếp bạn!
+            Sự hiện diện của quý khách trong ngày trọng đại này là niềm hạnh phúc và vinh hạnh lớn nhất đối với gia đình chúng tôi.
+            Rất mong được đón tiếp quý khách!
           </p>
         </motion.div>
 

@@ -61,8 +61,8 @@ export function Gallery() {
           </p>
         </div>
 
-        {/* Gallery dạng cuộn xuống */}
-        <div className="columns-1 md:columns-2 gap-6 [column-fill:_balance] space-y-6">
+        {/* Gallery dạng masonry, giữ nguyên tỉ lệ gốc của ảnh */}
+        <div className="columns-1 md:columns-2 gap-6 [column-fill:_balance]">
           {images.map((image, index) => (
             <motion.div
               key={index}
@@ -75,14 +75,11 @@ export function Gallery() {
               onClick={() => openLightbox(index)}
             >
               <div className="relative overflow-hidden rounded-[28px] shadow-md hover:shadow-xl transition-all duration-300 bg-white p-2">
-                <div
-                  className="relative overflow-hidden rounded-[22px]"
-                  style={{ aspectRatio: '1 / 2.6' }}
-                >
+                <div className="relative overflow-hidden rounded-[22px]">
                   <img
                     src={image.url}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto block"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>

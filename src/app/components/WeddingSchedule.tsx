@@ -92,10 +92,10 @@ export function WeddingSchedule() {
                     Thời gian tổ chức
                   </p>
                   <p className="text-lg md:text-xl text-gray-800 font-medium">
-                    Thứ bảy, 26 tháng 04 năm 2026
+                    Chủ Nhật, 26 tháng 04 năm 2026
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
-                    Ngày 10 tháng 03 năm Ất Sửu
+                    Ngày 10 tháng 03 năm Bính Ngọ
                   </p>
                 </div>
               </motion.div>
