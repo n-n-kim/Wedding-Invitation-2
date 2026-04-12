@@ -23,7 +23,7 @@ export function RSVP() {
       });
 
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbw9bD4Khilx0snCBKf8N6BPkAXJidv9cZfY7T4OjdLRbgf3XLkwKRf2yMezRyGW8CCm/exec',
+        'https://script.google.com/macros/s/AKfycbycoxBdm-gisgSZEOPXwSsl1EfD3aqn13Upmcv0rMPzcfV6kJBFhJBCzpM-o3gsP8iI/exec',
         {
           method: 'POST',
           body: formBody,
